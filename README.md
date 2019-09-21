@@ -1,5 +1,6 @@
 # pyGrC
 A set of methods about granular computing which is realized by python 3
+
 基于Python 3 实现的一系列粒计算方法
 ## methods
 ### fuzzy c-means (模糊c均值聚类)
@@ -58,6 +59,20 @@ The code is in kmedian.py
 * threshold: 迭代停止条件
 * U: 每个点隶属于每个类别的隶属度矩阵，属于为1，不属于为0
 * V: list的list，其中每个list是一个类别中心
+### principle of justifiable granularity (合理粒度原则)
+The code is in pojg.py
+
+granule = pojgMedE(data, alpha)
+* data: list of numbers which are used to form information granule
+* alpha: the parameter to adjust the importance of specificity
+* granule: the information granule which is [lower bound, median, upper bound]
+
+代码见pojg.py
+
+granule = pojgMedE(data, alpha)
+* data: 需要被粒化的数字list
+* alpha: 控制specificity的参数
+* granule: 信息粒，形式为 [下界, 中位数, 上界]
 ### rough set (粗糙集近似) 
 The code is in rs.py
 
@@ -76,17 +91,3 @@ Roughset = rs(classes, Set)
 ### decision theoretic rough set (决策粗糙集近似)
 I am coding
 正在开发中
-### principle of justifiable granularity (合理粒度原则)
-The code is in pojg.py
-
-granule = pojgMedE(data, alpha)
-* data: list of numbers which are used to form information granule
-* alpha: the parameter to adjust the importance of specificity
-* granule: the information granule which is [lower bound, median, upper bound]
-
-代码见pojg.py
-
-granule = pojgMedE(data, alpha)
-* data: 需要被粒化的数字list
-* alpha: 控制specificity的参数
-* granule: 信息粒，形式为 [下界, 中位数, 上界]
