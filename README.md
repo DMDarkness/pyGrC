@@ -88,6 +88,3 @@ Roughset = rs(classes, Set)
 * classes: set的list或list的list, 其中每个set或list是一个类
 * Set: 需要被近似的集合 
 * Roughset: 下近似与上近似组成的list
-### decision theoretic rough set (决策粗糙集近似)
-I am coding
-正在开发中
